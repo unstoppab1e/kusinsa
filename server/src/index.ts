@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 import express from 'express';
-import { shopRouter } from './shop';
 
 if (process.env.NODE_ENV === 'production') {
   console.log('Running in production mode');
@@ -15,6 +14,7 @@ const { PORT } = process.env;
 const app = express();
 app.use(express.json());
 
+import shopRouter from './shop';
 app.use(shopRouter);
 
 app.listen(PORT, () => {

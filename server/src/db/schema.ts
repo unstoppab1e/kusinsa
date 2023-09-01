@@ -37,5 +37,5 @@ export const order_items = pgTable('order_items', {
 });
 
 export type Product = InferModel<typeof products>;
-export type Orders = InferModel<typeof orders>;
+export type Order = InferModel<typeof orders>;
 export type OrderItem = InferModel<typeof order_items>;
