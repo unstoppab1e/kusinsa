@@ -1,4 +1,7 @@
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import {
+  NativeStackScreenProps,
+  createNativeStackNavigator,
+} from '@react-navigation/native-stack';
 import Products from '../screens/Products';
 
 type ProductsStackParamList = {
@@ -7,6 +10,14 @@ type ProductsStackParamList = {
 };
 
 const ProductsStack = createNativeStackNavigator<ProductsStackParamList>();
+export type ProductPageProps = NativeStackScreenProps<
+  ProductsStackParamList,
+  'Products'
+>;
+export type ProductDetailsProps = NativeStackScreenProps<
+  ProductsStackParamList,
+  'ProductDetails'
+>;
 
 const ProductsStackNav = () => {
   return (
