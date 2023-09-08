@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import express from 'express';
+import cors from 'cors';
 
 if (process.env.NODE_ENV === 'production') {
   console.log('Running in production mode');
@@ -12,6 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 const { PORT } = process.env;
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
 import shopRouter from './shop';
