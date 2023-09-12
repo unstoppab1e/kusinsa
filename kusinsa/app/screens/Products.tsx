@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   ListRenderItem,
   Image,
+  SafeAreaView,
 } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import { getProducts, Product } from '../api/api';
@@ -38,14 +39,14 @@ const Products = ({ navigation }: ProductPageProps) => {
   );
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
       <FlatList
         data={products}
         renderItem={renderProductItem}
         keyExtractor={(item) => item.id.toString()}
         numColumns={2}
       ></FlatList>
-    </View>
+    </SafeAreaView>
   );
 };
 

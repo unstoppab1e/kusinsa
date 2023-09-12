@@ -3,6 +3,7 @@ import {
   createNativeStackNavigator,
 } from '@react-navigation/native-stack';
 import Products from '../screens/Products';
+import ProductDetails from '../screens/ProductDetails';
 
 type ProductsStackParamList = {
   Products: undefined;
@@ -32,6 +33,11 @@ const ProductsStackNav = () => {
         name='Products'
         component={Products}
         options={{ headerTitle: 'Kusinsa', headerTintColor: 'white' }}
+      />
+      <ProductsStack.Screen
+        name='ProductDetails'
+        component={ProductDetails}
+        options={{ headerTitle: '', headerTintColor: 'white' }}
       />
     </ProductsStack.Navigator>
   );
